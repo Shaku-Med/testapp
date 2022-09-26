@@ -141,7 +141,7 @@ function Login ()
             <div className='main'>
                    <title>Login - Hackfriends</title>
                   <form onSubmit={ handlechange } action="">
-                        <h4 style={ { fontSize: '30px', fontWeight: '900' } }>Login</h4>
+                        <h4 style={ { fontSize: '30px', fontWeight: '900' } }>Logoooooo</h4>
                         <input onChange={ e => setphone( e.target.value ) } id='unic' type="tel" placeholder='Phone Number' />
                         <input onChange={ e => setpass( e.target.value ) } autoComplete='false' id='passes' type="password" placeholder='Password' />
                         <button id='signupb' style={{textAlign: 'center',display: 'flex', justifyContent: 'center'}}>
