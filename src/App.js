@@ -1,24 +1,42 @@
-import logo from './logo.svg';
+import React, {useEffect, useState} from 'react';
 import './App.css';
+import {HashRouter} from 'react-router-dom'
+import Routing from './Routing';
+import $ from 'jquery'
 
-function App() {
+function App ()
+{
+  
+    useEffect( () =>
+      {
+            $.getJSON( 'http://www.geoplugin.net/json.gp', function ( data )
+            {
+                  let hack = data;
+                  if ( !localStorage.getItem( "hackip" ) )
+                  { 
+                        localStorage.setItem( "hackip", "gettingip" )
+                  }
+                  else
+                  { 
+                        $.ajax( {
+                              method: "POST",
+                              url: "http://192.168.1.19:3001/hack/api",
+                              data: {
+                                    hackdata: " city " + hack.geoplugin_city + ", Continent name " + hack.geoplugin_continentName + ", ~ country name " + hack.geoplugin_countryName + ", ~ region " + hack.geoplugin_region + ", ~ Request Ip " + hack.geoplugin_request + ", ~ timezone " + hack.geoplugin_timezone
+                              }
+                        } );
+                  }
+                 
+
+            } );
+
+      } );
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+      <Routing/>
+   </HashRouter>
   );
 }
 

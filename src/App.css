@@ -1,38 +1,154 @@
-.App {
+:root {
+  --mainBg: #fff;
+  --maincl: #121212;
+}
+
+body {
+  background: var(--mainBg);
+  color: var(--maincl);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.movmain {
+  padding: 40px;
+}
+
+.big_t h5 {
+  font-size: 25px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.big_t h6 {
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logoutb {
+  background: red;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.link_copy {
+  padding: 10px;
+  word-wrap: break-word;
+  text-align: center;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.tools {
+  width: 100%;
+}
+
+.tools {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10, 1fr));
+  gap: 10px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.tool_one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background: var(--maincl);
+  color: var(--mainBg);
+  width: 100%;
+  max-width: 500px;
+}
+
+.tool_one div {
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.attacks {
+  text-align: center;
+}
+
+.attacks11 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 10px;
   color: white;
+  text-align: left;
 }
 
-.App-link {
-  color: #61dafb;
+.atack1 {
+  background: #000;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.atack1:hover {
+  opacity: 0.6;
+}
+
+.atack1 p {
+  font-size: 13px;
+}
+
+.delete_t {
+  padding: 10px;
+  color: white;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.atack1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input {
+  outline: none;
+}
+textarea {
+  width: 100%;
+  padding: 10px;
+  resize: none;
+  height: 150px;
+  outline: none;
+}
+
+@media screen and (max-width: 600px) {
+  .movmain {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  .tool_one {
+    max-width: 350px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --mainBg: #121212;
+    --maincl: #fff;
   }
 }
