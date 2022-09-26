@@ -130,7 +130,6 @@ function Login ()
                         else
                         { 
                               navigate( "../")
-                              window.location.reload();
                         }
                         
                   }
