@@ -60,7 +60,6 @@ function Home ()
             { 
                   localStorage.clear( "_T_R_I_D_" )
                   window.open( "../#/Login", "_self" )
-                  window.location.reload()
             }
             else
             { 
@@ -123,7 +122,6 @@ function Home ()
             { 
                  localStorage.clear( "_T_R_I_D_" )
                   window.open( "../#/Login", "_self" )
-                  window.location.reload() 
             }
             else
             { 
