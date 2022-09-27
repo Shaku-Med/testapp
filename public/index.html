@@ -28,71 +28,17 @@
     </head>
     <body>
         <div id="root"></div>
+        <script type="module" src="/src/index.jsx"></script>
 
-        <script>
-            document.addEventListener("contextmenu", (e) => {
-                e.preventDefault()
-            })
-            document.addEventListener("keydown", (e) => {
-                if (e.shiftKey === true) {
-                    if (e.key == "I") {
-                        e.preventDefault()
-                    }
-                } else if (e.ctrlKey === true) {
-                    if (e.shiftKey === true) {
-                        if (e.key == "I") {
-                            e.preventDefault()
-                        }
-                    }
-                } else if (e.ctrlKey === true) {
-                    if (e.shiftKey === true) {
-                        if (e.key == "A") {
-                            e.preventDefault()
-                        }
-                    }
-                } else if (e.ctrlKey === true) {
-                    if (e.shiftKey === true) {
-                        if (e.key == "U") {
-                            e.preventDefault()
-                        }
-                    }
-                } else if (e.ctrlKey === true) {
-                    if (e.shiftKey === true) {
-                        if (e.key == "T") {
-                            e.preventDefault()
-                        }
-                    }
-                } else if (e.ctrlKey === true) {
-                    if (e.shiftKey === true) {
-                        if (e.key == "M") {
-                            e.preventDefault()
-                        }
-                    }
-                } else if (e.ctrlKey === true) {
-                    if (e.key == "U") {
-                        e.preventDefault()
-                    }
-                } else if (e.ctrlKey === true) {
-                    if (e.shiftKey === true) {
-                        if (e.key == "J") {
-                            e.preventDefault()
-                        }
-                    }
-                }
-            })
-        </script>
-
-        <noscript
-            style="
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 100vh;
-                text-align: center;
-                padding: 40px;
-            "
-        >
-            <h1>Oups! This website needs javascript to Operate well</h1>
-        </noscript>
+        <!--
+    This script places a badge on your repl's full-browser view back to your repl's cover
+    page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+    teal, blue, blurple, magenta, pink!
+    -->
+        <script
+            src="https://replit.com/public/js/replit-badge.js"
+            theme="blue"
+            defer
+        ></script>
     </body>
 </html>
